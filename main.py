@@ -110,7 +110,7 @@ async def generate_minimap(longitude, latitude, session) -> Image:
     if HOME_LATITUDE and HOME_LONGITUDE:
         poi += [str(HOME_LATITUDE), str(HOME_LONGITUDE)]
     
-    url_map = f"https://image.maps.ls.hereapi.com/mia/1.6/mapview?apiKey={HERE_API_KEY}&ml=fre&ppi=320&vt=1&w=200&h=200&poi={','.join(poi)}"
+    url_map = f"https://image.maps.ls.hereapi.com/mia/1.6/mapview?apiKey={HERE_API_KEY}&ml=fre&nocp=1&poithm=0&poifc=FF6655&ppi=320&t=4&w=200&h=200&poi={','.join(poi)}"
 
     print(f">>> {url_map}")
 
